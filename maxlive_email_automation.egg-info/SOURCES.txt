@@ -1,0 +1,15 @@
+setup.py
+maxlive_email_automation.egg-info/PKG-INFO
+maxlive_email_automation.egg-info/SOURCES.txt
+maxlive_email_automation.egg-info/dependency_links.txt
+maxlive_email_automation.egg-info/entry_points.txt
+maxlive_email_automation.egg-info/requires.txt
+maxlive_email_automation.egg-info/top_level.txt
+src/__init__.py
+src/config/__init__.py
+src/config/settings.py
+src/database/__init__.py
+src/database/azure_connector.py
+src/database/explore_db.py
+src/pipeline/__init__.py
+src/utils/__init__.py

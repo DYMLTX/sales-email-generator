@@ -70,16 +70,24 @@ class Settings(BaseSettings):
     environment: str = "development"
     log_level: str = "INFO"
     
-    # Sub-configurations
-    azure: AzureSettings = AzureSettings()
-    gcp: GoogleCloudSettings = GoogleCloudSettings()
-    hubspot: HubSpotSettings = HubSpotSettings()
-    
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
-        case_sensitive=False
+        case_sensitive=False,
+        extra="ignore"  # Ignore extra fields from .env
     )
+    
+    @property
+    def azure(self) -> AzureSettings:
+        return AzureSettings()
+    
+    @property
+    def gcp(self) -> GoogleCloudSettings:
+        return GoogleCloudSettings()
+    
+    @property
+    def hubspot(self) -> HubSpotSettings:
+        return HubSpotSettings()
 
 
 # Global settings instance
